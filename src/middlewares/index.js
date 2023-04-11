@@ -1,7 +1,8 @@
 const loginAuth = require('./loginAuth');
-const userAuth = require('./userAuth');
+const { userAuth, checkUserExists } = require('./userAuth');
 
 module.exports = {
     loginAuth,
     userAuth,
+    checkUserExists,
 };
