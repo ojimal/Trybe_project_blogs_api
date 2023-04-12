@@ -17,7 +17,17 @@ const findAll = async () => {
   }
 };
 
+const findUserById = async (id) => {
+  try {
+    const user = await User.findOne({ where: { id }, attributes: { exclude: ['password'] } });
+    return user;
+  } catch (error) {
+    throw new Error('Failed to fetch user by id');
+  }
+};
+
 module.exports = {
   createNewUser,
   findAll,
+  findUserById,
 };
