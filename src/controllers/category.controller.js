@@ -18,7 +18,7 @@ const findAllCategories = async (req, res) => {
   } catch (err) {
     return err.message;
   }
-}
+};
 
 module.exports = {
   createCategory,
