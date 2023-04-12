@@ -11,7 +11,7 @@ const createCategory = async (req, res) => {
   }
 };
 
-const findAllCategories = async (req, res) => {
+const findAllCategories = async (_req, res) => {
   try {
     const categories = await CategoryService.findAllCategories();
     return res.status(200).json(categories);
