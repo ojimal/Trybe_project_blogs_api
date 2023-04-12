@@ -9,6 +9,16 @@ const createCategory = async (name) => {
   }
 };
 
+const findAllCategories = async () => {
+  try {
+    const categories = await Category.findAll();
+    return categories;
+  } catch (error) {
+    throw new Error('Failed to find all categories');
+  }
+};
+
 module.exports = {
   createCategory,
+  findAllCategories,
 };
